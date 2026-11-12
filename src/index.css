@@ -1,0 +1,174 @@
+/* SpiceStore.module.css */
+
+:root {
+    --primary: #8C2D19;       /* Deep spice terracotta */
+    --secondary: #D96B27;     /* Warm amber / paprika */
+    --accent: #F2A922;        /* Golden turmeric */
+    --dark: #2C221E;          /* Dark espresso / earthy text */
+    --light: #FDFBF7;         /* Warm cream background */
+    --white: #FFFFFF;
+    --gray-light: #EFECE6;
+    --gray-text: #665C54;
+    --success: #2E6F40;       /* Stock available green */
+    --warning: #C25914;       /* Low stock orange */
+    --danger: #A62F14;        /* Out of stock red */
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+.mainContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 8px;
+}
+
+/* Stock Section */
+.stockContainer {
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(44, 34, 30, 0.08);
+}
+
+.stockGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.spiceCard {
+    background: var(--light);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.spiceCard:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(140, 45, 25, 0.12);
+}
+
+.spiceName {
+    font-size: 1.25rem;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.spiceOrigin {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    margin-bottom: 12px;
+}
+
+.spicePrice {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.stockStatus {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.inStock {
+    background: rgba(46, 111, 64, 0.1);
+    color: var(--success);
+}
+
+.lowStock {
+    background: rgba(194, 89, 20, 0.1);
+    color: var(--warning);
+}
+
+.outOfStock {
+    background: rgba(166, 47, 20, 0.1);
+    color: var(--danger);
+}
+
+/* Order Form Section */
+.orderContainer {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(44, 34, 30, 0.08);
+}
+
+.orderForm {
+    display: grid;
+    gap: 20px;
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 12px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
+    font-size: 1rem;
+    background: var(--light);
+    color: var(--dark);
+    transition: var(--transition);
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: var(--white);
+    box-shadow: 0 0 0 3px rgba(217, 107, 39, 0.15);
+}
+
+.btnSubmit {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 14px 24px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--transition);
+    justify-self: start;
+}
+
+.btnSubmit:hover {
+    background: #732313;
+    transform: translateY(-2px);
+}
